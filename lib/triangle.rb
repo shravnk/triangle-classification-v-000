@@ -15,6 +15,7 @@ class Triangle
   end
   def kind
     if !self.valid?
+      binding.pry
       begin
         raise TriangleError
       rescue TriangleError => error
@@ -37,4 +38,4 @@ class TriangleError < StandardError
   end
 end
 
-Triangle.new(10,10,10).kind
+Triangle.new(0,10,10).kind
