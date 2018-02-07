@@ -9,9 +9,10 @@ class Triangle
   end
 
   def kind
-    if @s1 == @s2 == @s3 
+    if @s1 == @s2 == @s3
       puts "equilateral"
     end
+  end
 
 end
 
