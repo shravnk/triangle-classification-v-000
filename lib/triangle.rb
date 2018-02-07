@@ -32,9 +32,7 @@ class Triangle
 end
 
 class TriangleError < StandardError
-  def message
-    "NO!"
-  end
+
 end
 
 Triangle.new(0,10,10).kind
