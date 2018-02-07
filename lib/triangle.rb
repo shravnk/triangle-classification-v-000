@@ -20,8 +20,12 @@ class Triangle
       rescue TriangleError => error
         puts error.message
       end
-    else @sides.uniq.count == 1
-      puts "equilateral"
+    elsif @sides.uniq.count == 1
+      "equilateral"
+    elsif @sides.uniq.count == 2
+      "isosceles"
+    else
+      "scalene"
     end
   end
 
