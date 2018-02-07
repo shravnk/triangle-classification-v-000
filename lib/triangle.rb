@@ -8,6 +8,11 @@ class Triangle
     @s3 = s3
   end
 
+  def kind
+    if @s1 == @s2 == @s3 
+      puts "equilateral"
+    end
+
 end
 
 class TriangleError < StandardError
