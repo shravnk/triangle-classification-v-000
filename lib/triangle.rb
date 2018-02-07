@@ -16,9 +16,8 @@ class Triangle
   end
   def kind
     if !self.valid?
-
       begin
-        binding.pry
+        # binding.pry
         raise TriangleError
       end
     elsif @sides.uniq.count == 1
