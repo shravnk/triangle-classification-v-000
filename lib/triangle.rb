@@ -21,11 +21,11 @@ class Triangle
         puts error.message
       end
     elsif @sides.uniq.count == 1
-      "equilateral"
+      @equilateral
     elsif @sides.uniq.count == 2
-      "isosceles"
+      @isosceles
     else
-      "scalene"
+      @scalene
     end
   end
 
