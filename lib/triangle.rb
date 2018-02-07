@@ -14,7 +14,12 @@ class Triangle
     return valid
   end
   def kind
-    if @sides.uniq.count == 1
+    if !self.valid?
+      begin 
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+    else @sides.uniq.count == 1
       puts "equilateral"
     end
   end
@@ -22,7 +27,9 @@ class Triangle
 end
 
 class TriangleError < StandardError
- # triangle error code
+  def message
+    "NO!"
+  end
 end
 
 Triangle.new(10,10,10).kind
