@@ -7,10 +7,12 @@ class Triangle
   end
 
   def valid?
-    valid = true 
+    valid = true
     valid = false if @sides.any?{|side| side <= 0}
     all_sides = @sides.inject{ |sum,x| sum + x }
     valid = false if @sides.any?{|side| all_sides - side < side}
+    return valid
+  end
   def kind
     if @sides.uniq.count == 1
       puts "equilateral"
