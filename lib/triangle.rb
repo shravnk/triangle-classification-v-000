@@ -18,6 +18,7 @@ class Triangle
     if !self.valid?
       binding.pry
       begin
+        binding.pry
         raise TriangleError
       rescue TriangleError => error
         puts error.message
