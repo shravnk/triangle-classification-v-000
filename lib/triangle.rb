@@ -20,8 +20,6 @@ class Triangle
       begin
         binding.pry
         raise TriangleError
-      rescue TriangleError => error
-        puts error.message
       end
     elsif @sides.uniq.count == 1
       :equilateral
