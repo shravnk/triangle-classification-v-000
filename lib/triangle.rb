@@ -11,7 +11,7 @@ class Triangle
     valid = true
     valid = false if @sides.any?{|side| side <= 0}
     all_sides = @sides.inject{ |sum,x| sum + x }
-    valid = false if @sides.any?{|side| all_sides - side < side}
+    valid = false if @sides.any?{|side| all_sides - side <= side}
     valid
   end
   def kind
