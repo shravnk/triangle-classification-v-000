@@ -19,3 +19,5 @@ end
 class TriangleError < StandardError
  # triangle error code
 end
+
+Triangle.new(10,10,10).kind
