@@ -1,6 +1,6 @@
 class Triangle
   # write code here
-  attr_accessor :sides, :scalene, :isosceles, :equilateral
+  attr_accessor :sides
 
   def initialize(s1, s2, s3)
     @sides = [s1, s2, s3]
@@ -21,11 +21,11 @@ class Triangle
         puts error.message
       end
     elsif @sides.uniq.count == 1
-      @equilateral
+      :equilateral
     elsif @sides.uniq.count == 2
-      @isosceles
+      :isosceles
     else
-      @scalene
+      :scalene
     end
   end
 
